@@ -50,6 +50,4 @@ describe("Employee", () => {
 
         expect(employee.id).toEqual(id);
     });
-
-    
 })
