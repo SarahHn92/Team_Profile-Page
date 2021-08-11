@@ -1,12 +1,3 @@
-// can instantiate employee instance (2ms)
-// can set name via constructor arguments
-// can set id via constructor arguments (1ms)
-// can set email via constructor argument
-// can get name via getName()
-// can get id via getId()
-// can get email via getEmail()
-// getRole() should return "Employee" (1ms)
-
 const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
@@ -26,7 +17,7 @@ describe("Employee", () => {
     });
 
     it("can get ID via getID()", () => {
-        const id = '28';
+        const id = 28;
         const employee = new Employee(name);
 
         expect(employee.getID()).toEqual('Sarah', id);
@@ -45,4 +36,20 @@ describe("Employee", () => {
 
         expect(employee.getRole()).toEqual(role); 
     });
+
+    it("can set name via constructor arguments", () => {
+        const name = 'Sarah';
+        const employee = new Employee(name);
+
+        expect(employee.name).toEqual(name);
+    });
+
+    it("can set id via constructor arguments", () => {
+        const id = 28;
+        const employee = new Employee('Sarah', id);
+
+        expect(employee.id).toEqual(id);
+    });
+
+    
 })
