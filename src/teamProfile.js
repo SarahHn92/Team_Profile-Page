@@ -1,5 +1,5 @@
 // HTML template
-const html = (answers) => {
+const html = (employees) => {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@ const html = (answers) => {
     </div>
     <section class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">
-            ${employeeDataOutput(answers)}
+            ${employeeDataOutput(employees)}
         </div>
     </section>
     </body>
