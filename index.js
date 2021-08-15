@@ -16,7 +16,7 @@ let employees = [];
 // List prompt for role choices
 const chooseRoles = [
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'role',
         message: "Choose team member's role:",
         choices: [
@@ -149,8 +149,7 @@ function newEmployee() {
 
 function init() {
     newEmployee()
-    .then((employees) => fs.writeFile('dist/index.html', html(employees)))
-    .catch((err) => console.log(err)); 
+    // fs.writeFile('dist/index.html', html(employees))
 };
 
 init();
