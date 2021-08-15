@@ -21,12 +21,12 @@ const html = (answers) => {
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4 text-center">Team Profile</h1>
+            <h1 class="display-4 text-center">Our Team Profile</h1>
         </div>
     </div>
     <section class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">
-            ${employeeData(answers)}
+            ${employeeDataOutput(answers)}
         </div>
     </section>
     </body>
@@ -36,7 +36,7 @@ const html = (answers) => {
 
 
 // Generating cards with employee information based on input data
-function employeeData(employees) {
+function employeeDataOutput(employees) {
     let teamHTML = "";
     for (employee of employees) {
         switch (employee.getRole()) {
