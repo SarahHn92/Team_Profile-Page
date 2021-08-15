@@ -46,9 +46,9 @@ function employeeDataOutput(employees) {
                     <div class="card h-100">
                         <div class="card-header">
                             <h4>${employee.name}</h4>
-                            <h6>${employee.getRole()}</h6>
                         </div>
                         <div class="card-body">
+                            <h6>${employee.getRole()}</h6>
                             <p class="managerID">ID: ${employee.id}</p>
                             <p class="managerEmail">Email: <a href="mailto:${employee.email}">${employee.email}</a></p>
                             <p class="managerOffice">Office No: ${employee.officeNumber}</p>
@@ -63,9 +63,9 @@ function employeeDataOutput(employees) {
                     <div class="card h-100">
                         <div class="card-header">
                             <h4>${employee.name}</h4>
-                            <h6>${employee.getRole()}</h6>
                         </div>
                         <div class="card-body">
+                            <h6>${employee.getRole()}</h6>
                             <p class="engineerID">ID: ${employee.id}</p>
                             <p class="engineerEmail">Email: <a href="mailto:${employee.email}">${employee.email}</a></p>
                             <p class="engineerGithub">GitHub: <a href="https://www.github.com/${employee.getGithub()}">${employee.getGithub()}</a></p>
@@ -80,12 +80,12 @@ function employeeDataOutput(employees) {
                     <div class="card h-100">
                         <div class="card-header">
                             <h4>${employee.name}</h4>
-                            <h6>${employee.getRole()}</h6>
                         </div>
                         <div class="card-body">
-                                <p class="internID">ID: ${employee.id}</p>
-                                <p class="internEmail">Email: <a href="mailto:${employee.email}">${employee.email}</a></p>
-                                <p class="internSchool">School: ${employee.school}</p>
+                            <h6>${employee.getRole()}</h6>
+                            <p class="internID">ID: ${employee.id}</p>
+                            <p class="internEmail">Email: <a href="mailto:${employee.email}">${employee.email}</a></p>
+                            <p class="internSchool">School: ${employee.school}</p>
                         </div>
                     </div>
                 </div>
