@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require('jest');
-const html = require('./src/teamProfile.html');
+const html = require('./src/teamProfile.js');
 
 // Require classes
 const Employee = require('./lib/Employee');
