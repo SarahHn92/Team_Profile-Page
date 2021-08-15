@@ -34,7 +34,6 @@ const html = (employees) => {
     `;
 }
 
-
 // Generating cards with employee information based on input data
 function employeeDataOutput(employees) {
     let teamHTML = "";
@@ -68,7 +67,7 @@ function employeeDataOutput(employees) {
                             <h6>${employee.getRole()}</h6>
                             <p class="engineerID">ID: ${employee.id}</p>
                             <p class="engineerEmail">Email: <a href="mailto:${employee.email}">${employee.email}</a></p>
-                            <p class="engineerGithub">GitHub: <a href="https://www.github.com/${employee.getGithub()}">${employee.getGithub()}</a></p>
+                            <p class="engineerGithub">GitHub: <a href="https://www.github.com/${employee.getGitHubName()}">${employee.getGitHubName()}</a></p>
                         </div>
                     </div>
                 </div>

@@ -142,6 +142,11 @@ function newEmployee() {
                 })
                 break;
             case 'Team build completed.':
+                const writeFile = fs.writeFile('dist/index.html', html(employees), (err) => {
+                    if (err) {
+                        console.log(err)
+                    }
+                });
                 console.log(employees);
                 return employees;
         }
@@ -150,10 +155,5 @@ function newEmployee() {
 
 async function init() {
     newEmployee();
-    const writeFile = await fs.writeFile('dist/index.html', html(employees), (err) => {
-        if (err) {
-            console.log(err)
-        }
-    });
 }
  init();
