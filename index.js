@@ -150,9 +150,10 @@ function newEmployee() {
 
 async function init() {
     newEmployee();
-
-    const writeFile = await fs.writeFile('dist/index.html', html, (err) => 
-        err ? console.log(err) : console.log('Succeeded!')
-    );
+    const writeFile = await fs.writeFile('dist/index.html', html(employees), (err) => {
+        if (err) {
+            console.log(err)
+        }
+    });
 }
  init();

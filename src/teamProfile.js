@@ -95,3 +95,5 @@ function employeeDataOutput(employees) {
     }
     return teamHTML;
 }
+
+module.exports = html;
