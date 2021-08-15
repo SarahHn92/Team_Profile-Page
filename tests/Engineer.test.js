@@ -2,10 +2,10 @@ const Engineer = require('../lib/Engineer');
 
 describe(Engineer, () => {
     it("can set GitHub via constructor argument", () => {
-        const githubName = 'SarahHn92';
-        const engineer = new Engineer('Sarah', 28, 'someone@gmail.com', githubName);
-
-        expect(engineer.githubName).toEqual(githubName);
+        const githubUser = 'SarahHn92';
+        const engineer = new Engineer('Sarah', 28, 'someone@gmail.com', githubUser)
+        
+        expect(engineer.githubUser).toEqual(githubUser);
     });
 
     it("should return 'Engineer' when getRole() is called", () => {
@@ -16,10 +16,10 @@ describe(Engineer, () => {
     });
 
     it("can get GitHub name via getGitHubName()", () => {
-        const githubName = 'SarahHn92';
-        const engineer = new Engineer('Sarah', 28, 'someone@gmail.com', githubName);
+        const githubUser = 'SarahHn92';
+        const engineer = new Engineer('Sarah', 28, 'someone@gmail.com', githubUser);
 
-        expect(engineer.getGitHubName()).toEqual(githubName);
+        expect(engineer.getGitHubName()).toEqual(githubUser);
     })
 });
 

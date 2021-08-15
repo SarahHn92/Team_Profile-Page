@@ -2,10 +2,10 @@ const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
     it("can instantiate employee instance", () => {
-        let employee = new Employee("Sarah", 28, "someone@email.com");
+        let employee = new Employee("Sarah", 28, "someone@gmail.com");
 
         expect(employee.name).toEqual('Sarah');
-        expect(employee.id).toEqual('28');
+        expect(employee.id).toEqual(28);
         expect(employee.email).toEqual('someone@gmail.com');
     });
 
@@ -18,9 +18,9 @@ describe("Employee", () => {
 
     it("can get ID via getID()", () => {
         const id = 28;
-        const employee = new Employee(name);
+        const employee = new Employee('Sarah', id);
 
-        expect(employee.getID()).toEqual('Sarah', id);
+        expect(employee.getID()).toEqual(id);
     });
 
     it("can get email via getEmail()", () => {
@@ -31,8 +31,8 @@ describe("Employee", () => {
     });
     
     it("getRole() will return 'Employee'", () => {
-        const role = 'employee';
-        const employee = new Employee('Sarah', 28, email, role);
+        const role = 'intern';
+        const employee = new Employee('Sarah', 28, 'someone@gmail.com', role);
 
         expect(employee.getRole()).toEqual(role); 
     });
