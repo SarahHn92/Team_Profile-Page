@@ -142,14 +142,17 @@ function newEmployee() {
                 })
                 break;
             case 'Team build completed.':
+                console.log(employees);
                 return employees;
         }
     });
 };
 
-function init() {
-    newEmployee()
-    // fs.writeFile('dist/index.html', html(employees))
-};
+async function init() {
+    newEmployee();
 
-init();
+    const writeFile = await fs.writeFile('dist/index.html', html, (err) => 
+        err ? console.log(err) : console.log('Succeeded!')
+    );
+}
+ init();
