@@ -46,7 +46,7 @@ function employeeDataOutput(employees) {
                     <div class="card h-100">
                         <div class="card-header">
                             <h4>${employee.name}</h4>
-                            <h5>${employee.getRole()}</h5>
+                            <h6>${employee.getRole()}</h6>
                         </div>
                         <div class="card-body">
                             <p class="managerID">ID: ${employee.id}</p>
@@ -63,7 +63,7 @@ function employeeDataOutput(employees) {
                     <div class="card h-100">
                         <div class="card-header">
                             <h4>${employee.name}</h4>
-                            <h5>${employee.getRole()}</h5>
+                            <h6>${employee.getRole()}</h6>
                         </div>
                         <div class="card-body">
                             <p class="engineerID">ID: ${employee.id}</p>
@@ -80,7 +80,7 @@ function employeeDataOutput(employees) {
                     <div class="card h-100">
                         <div class="card-header">
                             <h4>${employee.name}</h4>
-                            <h5>${employee.getRole()}</h5>
+                            <h6>${employee.getRole()}</h6>
                         </div>
                         <div class="card-body">
                                 <p class="internID">ID: ${employee.id}</p>
