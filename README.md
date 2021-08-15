@@ -23,6 +23,9 @@
   ## Screenshots
   ![HTML Screenshot](./Assets/ProjectScrnSht1.png)
   ![Command Line Screenshot](./Assets/ProjectScrnSht2.png)
+
+  ## Video Link
+  [Video Walkthrough](https://drive.google.com/file/d/1yXZYWASELFwmwOnYed-oUHt5cC46vW4P/view)
   
   
   ## Installation
