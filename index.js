@@ -10,11 +10,13 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern =  require('./lib/Intern');
 
+// Empty array for team members
+let employees = [];
 
 // List prompt for role choices
 const chooseRoles = [
     {
-        type: 'list',
+        type: 'checkbox',
         name: 'role',
         message: "Choose team member's role:",
         choices: [
@@ -70,7 +72,7 @@ const engineerRole = [
     },
     {
         type: 'input',
-        name: 'officeNumber',
+        name: 'githubUser',
         message: "Engineer's GitHub username:"
     }
 ]
@@ -94,7 +96,61 @@ const internRole = [
     },
     {
         type: 'input',
-        name: 'officeNumber',
+        name: 'school',
         message: "Intern's school:"
     }
 ]
+
+// Function that takes choices and input data and pushes to employee array
+function newEmployee() {
+    inquirer.prompt(chooseRoles).then((answers) => {
+        switch(answers.role) {
+            case 'Manager':
+                inquirer.prompt(managerRole).then((answers) => {
+                    let manager = new Manager(
+                        answers.name,
+                        answers.id,
+                        answers.email,
+                        answers.officeNumber
+                    );
+                    employees.push(manager);
+                    newEmployee();
+                })
+                break;
+            case 'Engineer':
+                inquirer.prompt(engineerRole).then((answers) => {
+                    let engineer = new Engineer(
+                        answers.name,
+                        answers.id,
+                        answers.email,
+                        answers.githubUser
+                    );
+                    employees.push(engineer);
+                    newEmployee();
+                })
+                break;
+            case 'Intern':
+                inquirer.prompt(internRole).then((answers) => {
+                    let intern = new Intern(
+                        answers.name,
+                        answers.id,
+                        answers.email,
+                        answers.school
+                    );
+                    employees.push(intern);
+                    newEmployee();
+                })
+                break;
+            case 'Team build completed.':
+                return employees;
+        }
+    });
+};
+
+function init() {
+    newEmployee()
+    .then((employees) => fs.writeFile('dist/index.html', html(employees)))
+    .catch((err) => console.log(err)); 
+};
+
+init();
